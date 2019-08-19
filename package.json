@@ -1,0 +1,26 @@
+{
+  "name": "jest-testing",
+  "version": "1.0.0",
+  "description": "testing javascript functions using the jest framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tafodinho/jest-testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tafodinho/jest-testing/issues"
+  },
+  "homepage": "https://github.com/tafodinho/jest-testing#readme",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  },
+  "dependencies": {}
+}
