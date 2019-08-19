@@ -11,25 +11,21 @@ const reverseString = (string) => {
 }
 
 const analyse = (numbers) => {
-    let sum = numbers.reduce((previous, current) => current += previous)
-    let avrg = sum / numbers.length
+    let sum = numbers.reduce((previous, current) => current += previous) / numbers.length
+    // let avrg = sum / numbers.length
     
     return {
-        average: avrg,
+        average: sum,
         min: Math.min(...numbers),
         max: Math.max(...numbers),
-        length: Math.length
+        length: numbers.length
     }
 }
 
 class Calculator {
 
     add(...numbers) {
-        let result = 0
-        numbers.forEach((value, index) => {
-            result += value
-        })
-        return result
+        return numbers.reduce((prev, cur) => cur *= prev)
     }
 
     subtract(a, b) {
@@ -40,11 +36,7 @@ class Calculator {
         return a / b
     }
     multiply(...numbers) {
-        let result = 1
-        numbers.forEach((value, index) => {
-            result *= value
-        })
-        return result
+        return numbers.reduce((prev, cur) => cur *= prev)
     }
 
 }
@@ -74,4 +66,4 @@ class Cypher {
 const calc = new Cypher(5)
 console.log(calc.encypher("Hell56o loo!k who we got here"))
 
-module.exports = { capitalize, reverseString, Calculator, Cypher}
+module.exports = { capitalize, reverseString, analyse, Calculator, Cypher}

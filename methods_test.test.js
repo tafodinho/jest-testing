@@ -1,5 +1,5 @@
 // import capitalize from './methods_to_test';
-const { capitalize, reverseString, Calculator, Cypher } = require('./methods_to_test.js')
+const { capitalize, reverseString, analyse, Calculator, Cypher } = require('./methods_to_test.js')
 
 
 test("capitalize", () => {
@@ -32,16 +32,11 @@ test("cypher: encypher", () => {
 })
 
 test("analyse", () => {
-    const data = {
-        average: 12,
-        min: 2,
-        max: 6,
-        length: 4
-    }
-    expect(data).toEqual({
-        average: 12,
-        min: 2,
-        max: 6,
-        length: 4
+    const data = [1,2,3,4,5]
+    expect(analyse(data)).toEqual({
+        average: 3,
+        min: 1,
+        max: 5,
+        length: 5
     })
 })
