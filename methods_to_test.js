@@ -32,7 +32,10 @@ class Calculator {
     }
 
     divide(a, b) {
-        return a / b
+        if(b === 0) {
+            return '-i'
+        }
+        return Math.round((a / b) * 1000) / 1000
     }
     multiply(...numbers) {
         return numbers.reduce((prev, cur) => cur * prev)
@@ -55,7 +58,7 @@ class Cypher {
     }
 
     shiftChar(char) {
-        if(char === " ") {
+        if(!Object.keys(this.defaultString).includes(char)) {
             return char
         }
         return Object.keys(this.defaultString)[(this.defaultString[char] + 5)%26] 
