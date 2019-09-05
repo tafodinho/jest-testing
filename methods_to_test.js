@@ -3,19 +3,18 @@ const capitalize = (string) => {
 }
 
 const reverseString = (string) => {
-    let splitString = string.split("")
-    let reversedArray = splitString.reverse()
-    let joinString = reversedArray.join("")
+    const splitString = string.split("")
+    const reversedArray = splitString.reverse()
+    const joinString = reversedArray.join("")
 
     return joinString
 }
 
 const analyse = (numbers) => {
-    let sum = numbers.reduce((previous, current) => current += previous) / numbers.length
-    // let avrg = sum / numbers.length
+    let avg = numbers.reduce((previous, current) => current + previous) / numbers.length
     
     return {
-        average: sum,
+        average: avg,
         min: Math.min(...numbers),
         max: Math.max(...numbers),
         length: numbers.length
@@ -25,7 +24,7 @@ const analyse = (numbers) => {
 class Calculator {
 
     add(...numbers) {
-        return numbers.reduce((prev, cur) => cur *= prev)
+        return numbers.reduce((prev, cur) => cur + prev)
     }
 
     subtract(a, b) {
@@ -36,7 +35,7 @@ class Calculator {
         return a / b
     }
     multiply(...numbers) {
-        return numbers.reduce((prev, cur) => cur *= prev)
+        return numbers.reduce((prev, cur) => cur * prev)
     }
 
 }
@@ -48,7 +47,7 @@ class Cypher {
     }
 
     encypher(string) {
-        let stringArray = string.split("")
+        const stringArray = string.split("")
         stringArray.forEach((value, index) => {
             stringArray[index] = this.shiftChar(value.toLowerCase())
         })
