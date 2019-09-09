@@ -93,17 +93,7 @@ describe("Testing the cypher module", () => {
 		expect(cypher.encypher("@the old bookshop")).toBe("@ymj tqi gttpxmtu")
 	})
 })
-// test.each([
-// 	[[1,2,3,4,5],[3,1,5,5]],
-// 	[[2,6,0,8],[4,0,8,4]]
-// ])("Analyse", (data, result) => {
-// 	expect(analyse(data)).toEqual({
-// 		average: result[0],
-// 		min: result[1],
-// 		max: result[2],
-// 		length: result[3]
-// 	})
-// })
+
 describe("Testing the analyse function", () => {
 	const test1 = [1,2,3,4,5]
 	const test2 = [2,6,0,8]
