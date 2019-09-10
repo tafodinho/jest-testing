@@ -1,5 +1,5 @@
 linters:
     flake8:
     eslint:
-        config: './eslintrc.json'
+        config: './eslint.config'
     csslint:
