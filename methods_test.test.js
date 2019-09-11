@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
 const {
- capitalize, reverseString, analyse, Calculator, Cypher 
+  capitalize, reverseString, analyse, Calculator, Cypher,
 } = require('./methods_to_test.js');
 
 describe('capitalize function', () => {
@@ -68,7 +68,7 @@ describe('Testing calculator multiply function', () => {
 });
 
 describe('Testing calculator divide function', () => {
-  const calc = new Calculator;()
+  const calc = new Calculator();
   it('should divide 1 by 2', () => {
     expect(calc.divide(1, 2)).toBe(0.5);
   });

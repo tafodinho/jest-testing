@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable max-classes-per-file */
-const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1);
 
 const reverseString = (string) => {
   const splitString = string.split('');
